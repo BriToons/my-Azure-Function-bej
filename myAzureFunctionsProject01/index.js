@@ -6,6 +6,7 @@ module.exports = async function (context, req) {
 
     responseMessage = "Welcome to the site \nWho might you be?"
     if (name != undefined){responseMessage = "Hello " + name + " hope youre having a wonderful day!"}
+    if (name == undefined && lastname != undefined){responseMessage = "Would you mind providing me with a first name " + lastname +"?"}
     if (name === "Eric" || name === "Brian"){responseMessage = "Welcome to the secret side of the site " + name + "\n"}
     if(lastname != undefined && name != undefined){
         responseMessage = "Oh so youre " + name + " " + lastname + ". Why didnt you just say so?" 
